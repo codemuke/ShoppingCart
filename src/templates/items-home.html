@@ -1,0 +1,48 @@
+<!-- search bar reference: https://codepen.io/huange/pen/bGqMqM -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/items.css">        
+  </head>
+  <body>     
+    <div id="wrap">
+    <div id="columns" class="columns_4" > 
+
+        <div ALIGN="CENTER" style="padding: 2em;">  
+            SEARCH : <input type="text" class="searchTerm" placeholder="What are you looking for?" ng-model="query"> 
+            
+            <div ALIGN="RIGHT"  class="topcorner"> 
+              <p class="container">
+                  <a class="btn btn-info btn-lg" ui-sref="CartPayment" >
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Cart ({{ ItemC.cartQuantityVariable }})                  
+                  </a>
+              </p>             
+          </div>
+        </div>
+               
+        <br>            
+              <div> 
+                <figure ng-repeat="item in ItemC.ItemsObject | filter:query">
+                  <img src={{item.imgsrc}}>
+                  <figcaption>{{item.name}}</figcaption>
+                    <span class="price">Rs.{{item.price}}</span>
+                    <a class="button" ng-click="ItemC.cartItems(item.name, item.price, item.quantity, item.imgsrc)"> ADD </a>
+                </figure>
+              </div> 
+        </div> 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+  
+    
+
+

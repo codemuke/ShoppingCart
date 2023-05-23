@@ -1,0 +1,78 @@
+<div class="container"> 
+<div  class="card"> 
+<br>
+<div class="center" style="font: 1.1em bold black;">
+    TOTAL AMOUNT : <b> {{ cartPaymentC.cartTotalPrice() }} <br> <br> </b>
+    
+</div>
+    
+    <form name="myForm">
+         <label style="float: left;">ENTER PIN : </label>
+        <input  ng-model="data"  type="password" autocomplete="cc-number" maxlength="4" placeholder="xxxx" required>
+       
+        <br><br> 
+        <button class="pay" id="submit" ui-sref="cartPageUpdate" ng-disabled= "myForm.$invalid"  ng-click="cartPaymentC.cartAfterPay()"> PAY </button>
+    </form>
+
+    <!-- when payment is done means empty the cart -->
+</div>
+</div>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  text-align: center;
+}
+
+
+.container {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(36, 34, 158) 0%,
+    rgb(129, 148, 156) 90%
+  );
+}
+
+.pay {
+  cursor:pointer;
+  display: inline-block;
+  margin-right: 10px;
+  background: #253386;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 38px;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 170px;
+  text-align: center;
+}
+
+.pay:hover {
+  background: #fff;
+  color: #3973a8;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 350px;
+  height: 180px;
+  background-color: #ffffff;
+  padding: 10px 30px;
+}
+
+</style>

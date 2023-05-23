@@ -1,0 +1,13 @@
+/* .adjustcorner{
+    position:absolute;
+    top:0;
+    right:0;
+    position: relative; height: 10%; top: 100%;
+   } */
+
+   .input-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 22.5px 15px;
+  }

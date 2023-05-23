@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    
+
+
+    <div ALIGN="RIGHT"> 
+        <p style="padding: 1.5%;"> <button ui-sref="home" style="height: 2em; width: 5em; background-color: rgb(59, 52, 155); color: aliceblue;"> Log Out </button> <t></t> 
+        <p class="container" style="float: right;" style="float: right;">
+            <a ui-sref="cartPageUpdate" class="btn btn-info btn-lg">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Cart ( {{cartPaymentC.cartArray.length}})
+            </a>
+        </p> 
+    </div>
+    <br> <br>
+    <div style="padding: 5em;">
+        <div ng-show="cartPaymentC.cartArray.length ===0">
+            <h3>Thanks For Shopping!!</h3>
+            <!-- <h4>"No Items in the cart"</h4>  -->
+        </div>
+        <h4 style="color:blue;font-size: 30px; text-decoration: underline;"> <a ui-sref="ItemsHome"> Add Items to the cart</a> </h4>
+    </div>
+    
+
+
+</body>
+</html>
+
+<style>
+      .btn-lg, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #4f44b3 !important;    
+}
+</style>

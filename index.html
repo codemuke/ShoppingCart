@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>ShoppingCart App</title>
+</head>
+<body ng-app="ShoppingCart">
+    
+    <ui-view></ui-view>
+    
+    <!-- Library -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Module -->
+    <script src="src/module.js"></script>
+
+    <!-- Artifacts -->
+    <script src="src/signup-controller.js"></script>
+    <script src="src/signin-controller.js"></script>    
+    <script src="src/user-service.js"></script>
+    <script src="src/item-service.js"></script>
+    <script src="src/item-controller.js"></script>
+    <script src="src/cart-payment-controller.js"></script>
+
+    <!-- Route -->
+    <script src="route.js"></script>
+    
+</body>
+</html>

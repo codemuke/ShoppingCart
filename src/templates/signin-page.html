@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signin.css">
+    <title>SignIn</title>
+</head>
+<body>
+    <div class="container"  ng-controller="SignInController as SignInC">
+        <div class="card">
+          <div class="card_title">
+            <h1>Welcome</h1>        
+          </div>
+          <div class="form">
+            <form ng-submit="SignInC.onChangeInputSignIn()" name="theForm" >
+                <!-- "SignInC.onChangeInputSignIn()" -->
+                <label for="email"> e-mail:</label>
+                <input type="email" ng-model="SignInC.email" name="email" id="email" required><br><br>   
+            
+                <label for="password">Password: </label>
+                <input type="password" ng-model="SignInC.password"   id="password" name="password" required><br><br> 
+                <!-- Only if user exists take to items home page -->       
+                            
+                <button type="submit" > SIGN IN </button> 
+                <!--  ng-disabled = "!SignInC.signInBool" -->
+                <!-- <button type="submit" ui-sref="{{ SignInC.BoolUserExists ? '.ItemsHome' :'.' }}"   > SIGN IN</button> -->
+                <p style="color: rgb(235, 24, 24);">{{SignInC.SignInMessage}}</p>
+            </form>
+          </div>
+          <div class="card_terms">
+              <span>New User? <a ui-sref="SignUp"> Sign Up </a></span>
+              <!-- <input type="checkbox" name="" id="terms"> <span>I have read and agree to the <a href="">Terms of Service</a></span> -->
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
+
+
+

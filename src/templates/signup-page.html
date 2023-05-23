@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signin.css">
+    <title>SignIn</title>
+</head>
+<body ng-controller="SignUpController as SignUpC">
+    <div class="container" >
+        <div class="card">
+          <div class="card_title">
+            <h1>Welcome to Signup Page</h1>        
+          </div>
+          <div class="form">
+            <form ng-submit="SignUpC.onSubmitSignUp(theForm.$valid)" name="theForm"  novalidate >
+              <!-- <style> 
+                form {  margin: 10 auto; }
+                input { margin: 10px auto; }
+              </style> -->
+              <label for="name">name: </label>
+              <input type="text" ng-model="SignUpC.name" id="name" name="name" required>       
+              
+              <label for="e-mail">e-mail: </label>
+              <input type="email" ng-model="SignUpC.email" name="e-mail" id="email" required>
+      
+              <label for="phone"> Phone Number:</label>
+              <input type="tel" maxlength="10" name="phone"  ng-model="SignUpC.phone" id="phone" placeholder="Enter your Phone Number" required>
+      
+              <label for="password"> password </label>
+              <input type="password" ng-model="SignUpC.password"  ng-blur="SignUpC.onChangeInputSignup()" id="menu-number" name="menu-number" required>    
+          
+              <button type="submit" ui-sref="SignIn"> SIGN UP </button> 
+              <!-- <p style="color: rgb(17, 97, 6);">{{SignUpC.BoolUserExists}}</p>     -->
+            </form>
+          </div>
+          <div class="card_terms">
+              <span>Already Registered? <a ui-sref="SignIn"> Sign In </a></span>
+              <!-- <input type="checkbox" name="" id="terms"> <span>I have read and agree to the <a href="">Terms of Service</a></span> -->
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
+
+
+
+
+
+

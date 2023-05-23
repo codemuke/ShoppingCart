@@ -1,0 +1,57 @@
+Somelinks that helped me to design the website
+
+Signin, Signup Page
+https://codepen.io/NikhilBobade/pen/abJWwOV
+
+ CSS Button (Login & Sign Up)
+ https://codepen.io/rzkytmgr/pen/BaooXJP 
+
+input box is not empty angualrjs
+
+Check if a input box is empty
+ https://stackoverflow.com/questions/16691778/check-if-a-input-box-is-empty
+
+ A better alternative might be to really take advantage of the form abilities of Angular:
+
+<form name="myform">
+  <input name="myfield" ng-model="somefield" ng-minlength="5" required>
+  <span ng-show="myform.myfield.$error.required">Please enter something!</span>
+  <span ng-show="!myform.myfield.$error.required">Good boy!</span>
+</form> 
+
+
+
+How do I empty an array in JavaScript?
+https://stackoverflow.com/questions/1232040/how-do-i-empty-an-array-in-javascript
+
+How to place div in top right hand corner of page?
+https://stackoverflow.com/questions/14231329/how-to-place-div-in-top-right-hand-corner-of-page 
+
+How do you float a div to the top right hand corner of a page using css? I want to float the topcorner div which is below:
+
+<p><a href="login.php">Log in</a></p>
+
+<div class="topcorner"><a href="home.php">Back to Home</a></div>
+
+angularjs how to pass values from controller of specific state to another state?
+https://www.google.com/search?q=angularjs+how+to+pass+values+from+controller+of+specific+state+to+another+state 
+
+how to inject stateparams in controller?
+https://www.google.com/search?q=how+to+inject+stateparams+in+controller&oq=how+to+inject+stateparams+in+controller 
+
+how to go to the another page after clicking a button using uisref?
+https://www.google.com/search?q=how+to+go+to+the+another+page+after+clicking+a+button+using+uisref&oq=how+to+go+to+the+another+page+after+clicking+a+button+using+uisref 
+
+
+AngularJS Filter Function Example or Search Filter Example
+
+Syntax of using AngularJS Filter
+Following is the syntax of using filter in angularjs applications to search or filter items from array list. 
+
+{{filterexpression | filter : expression}}
+
+map js 
+Return a new array with the square root of all element values:
+
+const numbers = [4, 9, 16, 25];
+const newArr = numbers.map(Math.sqrt)

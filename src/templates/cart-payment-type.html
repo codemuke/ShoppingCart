@@ -1,0 +1,95 @@
+<!-- for enabling only one input field at one specified time
+https://stackoverflow.com/questions/44600280/enable-disable-radio-buttons-in-angularjs -->
+
+<div class="container">
+    <div> 
+    TOTAL AMOUNT: <b> ₹ {{ cartPaymentC.cartTotalPrice() }}</b> <br> <br> 
+    PAY via: <br><br>  
+    </div>
+
+    <form name="myForm" >
+            <!-- <label for="card">Card</label> 
+            <input type ="radio" id="card" ng-model="type" ng-value="1">        
+          
+            <label for="card" ng-disabled="type != 1"><br><br> Enter Card Number :</label>
+            <input id="card" ng-disabled="type != 1" type="tel" maxlength="16" ng-model="cartPaymentC.carddata"  placeholder="xxxx xxxx xxxx xxxx" >
+            <br><br>              -->
+           
+
+            <label for="UPI">UPI</label> 
+            <input  id="UPI"  type="radio" ng-model="type"  ng-value="2" required>
+            
+            
+            <label for="UPI" ng-disabled="type != 2"><br><br> Enter UPI Id :</label>
+            <input id="UPI" ng-disabled="type != 2" ng-model="cartPaymentC.upidata" type="email" placeholder="enter UPI id" required>  
+            
+            <br><br>   
+
+        <button ng-disabled="myForm.$invalid" ui-sref="PaymentGateway" id="pay-now"> CONTINUE </button>       
+        <!--  ng-disabled="cartPaymentC.boolDisable"-->
+    </form>
+</div>
+
+<style>
+    body {
+	background: #f5f4fa;
+}
+.container {
+    padding: 2em;
+	width: 450px;
+	margin: 150px auto;
+	border-radius: 5px;
+	border: 1px solid #95A5A6;
+	color: #515751;
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(149,165,166,0.75);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(149,165,166,0.75);
+  box-shadow: 4px 4px 6px 0px rgba(149,165,166,0.75);
+}
+
+h1 {
+	color:#515751;
+	margin:0;
+	padding: 10px 20px;
+	font-size: 24px;
+	font-weight:normal;
+}
+
+input {
+	font-size: 18px;
+	color:#4b6cb7;
+	/* background-color: #f7f7f7; */
+	width:100%;
+	padding:13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+}
+
+.form-control:focus {
+  border: 3px solid #2ECC71;
+}
+
+#pay-now {
+    cursor:pointer;
+	font-size: 20px;
+	color:#f7f7f7;
+	background-color: #4b44af;
+	width:100%;
+	padding:13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+  /* box-shadow:
+  transition: all .3s linear; */
+}
+
+#pay-now a {
+	text-decoration: none;
+	color:#4b6cb7;
+}
+
+#pay-now:hover {
+	color: #f7f7f7;
+	background: #27AE60;
+	outline: none;
+  transition: all .3s linear;
+}
+</style>
